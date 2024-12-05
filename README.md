@@ -7,10 +7,10 @@
 Python is a popular programming language created by **Guido van Rossum** and released in **1991**.
 
 ### Applications of Python:
-1. **Web development** (server-side)
-2. **Software development**
-3. **Mathematics**
-4. **System scripting**
+1. Web development (server-side)
+2. Software development
+3. Mathematics
+4. System scripting
 
 ---
 
