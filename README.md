@@ -304,5 +304,232 @@ txt = f"The price is {price:.2f} dollars"
 print(txt)  # Outputs: The price is 59.00 dollars
 ```
 
+---
+
+## Python Lists
+
+### Python Built-in Data Types:
+1. **Lists**  
+2. Tuple  
+3. Set  
+4. Dictionary  
+
+---
+
+### Lists:
+- Created using square brackets:  
+  ```python
+  mylist = ["apple", "banana", "cherry"]
+  print(mylist)
+  ```
+- **Characteristics**:
+  - Ordered.
+  - Changeable.
+  - Allow duplicate values.
+  - Indexed (starting at 0).
+
+---
+
+### Properties of Lists:
+#### Ordered Lists:
+- Items have a defined order that does not change.
+- New items are added to the end.
+
+#### Changeable Lists:
+- You can modify, add, and remove items after creation.
+
+---
+
+### Syntax and Examples:
+
+#### Changing Items in a List:
+1. **Change Item Value**:
+   ```python
+   mylist = ["apple", "banana", "cherry"]
+   mylist[1] = "blackcurrant"
+   print(mylist)
+   ```
+
+2. **Change a Range of Values**:
+   ```python
+   mylist = ["apple", "banana", "cherry", "orange", "kiwi", "mango"]
+   mylist[1:3] = ["blackcurrant", "watermelon"]
+   print(mylist)
+   ```
+
+#### Adding Items to a List:
+1. **Insert a New Item**:
+   ```python
+   mylist = ["apple", "banana", "cherry"]
+   mylist.insert(2, "watermelon")
+   print(mylist)
+   ```
+
+2. **Append an Item**:
+   ```python
+   mylist = ["apple", "banana", "cherry"]
+   mylist.append("orange")
+   print(mylist)
+   ```
+
+3. **Extend a List**:
+   ```python
+   mylist = ["apple", "banana", "cherry"]
+   tropical = ["mango", "pineapple", "papaya"]
+   mylist.extend(tropical)
+   print(mylist)
+   ```
+
+---
+
+### Removing Items from a List:
+1. **Remove a Specified Item**:
+   ```python
+   mylist = ["apple", "banana", "cherry"]
+   mylist.remove("banana")
+   print(mylist)
+   ```
+
+2. **Remove a Specified Index**:
+   ```python
+   mylist = ["apple", "banana", "cherry"]
+   mylist.pop(1)
+   print(mylist)
+   ```
+
+3. **Delete an Index**:
+   ```python
+   mylist = ["apple", "banana", "cherry"]
+   del mylist[0]
+   print(mylist)
+   ```
+
+4. **Clear the Entire List**:
+   ```python
+   mylist = ["apple", "banana", "cherry"]
+   mylist.clear()
+   print(mylist)
+   ```
+
+---
+
+### Looping Through a List:
+1. **Loop Through Items**:
+   ```python
+   mylist = ["apple", "banana", "cherry"]
+   for x in mylist:
+       print(x)
+   ```
+
+2. **Loop Through Indexes**:
+   ```python
+   mylist = ["apple", "banana", "cherry"]
+   for i in range(len(mylist)):
+       print(mylist[i])
+   ```
+
+3. **Using a While Loop**:
+   ```python
+   mylist = ["apple", "banana", "cherry"]
+   i = 0
+   while i < len(mylist):
+       print(mylist[i])
+       i += 1
+   ```
+
+4. **Using List Comprehension**:
+   ```python
+   mylist = ["apple", "banana", "cherry"]
+   [print(x) for x in mylist]
+   ```
+
+---
+
+### List Comprehension:
+- Shorter syntax to create lists:
+  ```python
+  newlist = [expression for item in iterable if condition]
+  ```
+
+**Example**:
+```python
+fruits = ["apple", "banana", "cherry"]
+newlist = [fruit.upper() for fruit in fruits if "a" in fruit]
+print(newlist)
+```
+
+---
+
+### Sorting Lists:
+1. **Alphanumeric Sorting**:
+   ```python
+   mylist = ["orange", "mango", "kiwi", "pineapple", "banana"]
+   mylist.sort()
+   print(mylist)
+   ```
+
+2. **Descending Order**:
+   ```python
+   mylist = ["orange", "mango", "kiwi", "pineapple", "banana"]
+   mylist.sort(reverse=True)
+   print(mylist)
+   ```
+
+3. **Custom Sort**:
+   ```python
+   def myfunc(n):
+       return abs(n - 50)
+
+   mylist = [100, 50, 65, 82, 23]
+   mylist.sort(key=myfunc)
+   print(mylist)
+   ```
+
+4. **Reverse the List**:
+   ```python
+   mylist = ["banana", "Orange", "Kiwi", "cherry"]
+   mylist.reverse()
+   print(mylist)
+   ```
+
+---
+
+### Copying a List:
+1. **Using `copy()`**:
+   ```python
+   mylist = ["apple", "banana", "cherry"]
+   newlist = mylist.copy()
+   print(newlist)
+   ```
+
+2. **Using Slice Operator**:
+   ```python
+   mylist = ["apple", "banana", "cherry"]
+   newlist = mylist[:]
+   print(newlist)
+   ```
+
+---
+
+### Joining Lists:
+1. **Concatenation**:
+   ```python
+   list1 = ["a", "b", "c"]
+   list2 = [1, 2, 3]
+   combined_list = list1 + list2
+   print(combined_list)
+   ```
+
+2. **Using `extend()`**:
+   ```python
+   list1 = ["a", "b", "c"]
+   list2 = [1, 2, 3]
+   list1.extend(list2)
+   print(list1)
+   ```
+
+--- 
+
+
 
 
