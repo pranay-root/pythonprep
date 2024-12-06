@@ -530,6 +530,137 @@ print(newlist)
 
 --- 
 
+### **Python Tuples**
 
+A tuple is a collection which is ordered and **unchangeable**.
+
+Example:
+```python
+thistuple = ("apple", "banana", "cherry")
+print(thistuple)
+```
+
+- **Tuple characteristics**:
+  - **Ordered**: The items have a defined order, and that order will not change.
+  - **Unchangeable**: Once a tuple is created, you cannot modify it.
+  - **Allows duplicate values**: Tuples can contain duplicate values.
+
+---
+
+### **Changing Tuple Values**
+
+Although tuples are unchangeable, you can change their items by converting them to a list, modifying the list, and converting it back to a tuple.
+
+**Example**:
+```python
+x = ("apple", "banana", "cherry")
+y = list(x)
+y[1] = "kiwi"
+x = tuple(y)
+print(x)
+```
+
+---
+
+### **Adding Items to a Tuple**
+
+You cannot directly add items to a tuple, but you can convert it to a list, add items, and then convert it back to a tuple.
+
+**Example**:
+```python
+thistuple = ("apple", "banana", "cherry")
+y = list(thistuple)
+y.append("orange")
+thistuple = tuple(y)
+```
+
+---
+
+### **Add Tuple to a Tuple**
+
+You can concatenate two tuples using `+=`.
+
+**Example**:
+```python
+thistuple = ("apple", "banana", "cherry")
+y = ("orange",)
+thistuple += y
+print(thistuple)
+```
+
+---
+
+### **Removing Items from a Tuple**
+
+To remove an item, convert the tuple to a list, remove the item, and then convert it back to a tuple.
+
+**Example**:
+```python
+thistuple = ("apple", "banana", "cherry")
+y = list(thistuple)
+y.remove("apple")
+thistuple = tuple(y)
+```
+
+---
+
+### **Unpacking a Tuple**
+
+You can unpack the values of a tuple into separate variables.
+
+**Example**:
+```python
+fruits = ("apple", "banana", "cherry")
+(green, yellow, red) = fruits
+print(green)
+print(yellow)
+print(red)
+```
+
+---
+
+### **Using Asterisk (*) for Unpacking**
+
+You can use an asterisk (`*`) to capture multiple items into one variable.
+
+**Example**:
+```python
+list = ("cat", "dog", "hacker", "hunt")
+(1, 2, *3) = list
+print(1, 3)
+print(2)
+```
+
+---
+
+### **Join Two Tuples**
+
+You can join two tuples using the `+` operator.
+
+**Example**:
+```python
+tuple1 = ("a", "b", "c")
+tuple2 = (1, 2, 3)
+tuple3 = tuple1 + tuple2
+print(tuple3)
+```
+
+---
+
+### **Tuple Methods**
+
+1. **`count()`**: Returns the number of times a specified value occurs in a tuple.
+   ```python
+   thistuple = ("apple", "banana", "cherry", "apple")
+   print(thistuple.count("apple"))  # Output: 2
+   ```
+
+2. **`index()`**: Searches the tuple for a specified value and returns the position of where it was found.
+   ```python
+   thistuple = ("apple", "banana", "cherry")
+   print(thistuple.index("banana"))  # Output: 1
+   ```
+
+---
 
 
