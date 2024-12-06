@@ -663,4 +663,248 @@ print(tuple3)
 
 ---
 
+### **Python Sets**
+
+A **set** is a collection used to store multiple items in a single variable. It is unordered, unchangeable*, and unindexed.
+
+Sets are written with curly brackets.
+
+**Example**:
+```python
+thisset = {"apple", "banana", "cherry"}
+print(thisset)
+```
+
+- **Set Characteristics**:
+  - **Unordered**: Items in a set do not have a defined order.
+  - **Unchangeable**: Once a set is created, its items cannot be changed.
+  - **No Duplicates**: Duplicates are not allowed in sets. Duplicate items are ignored.
+
+---
+
+### **set() Constructor**
+
+You can also create a set using the `set()` constructor.
+
+**Example**:
+```python
+thisset = set(("apple", "banana", "cherry"))  # Note the double round-brackets
+print(thisset)
+```
+
+---
+
+### **Access Set Items**
+
+You cannot access set items by index or key. However, you can loop through the set using a for loop or use the `in` keyword to check if a value is present in the set.
+
+**Examples**:
+```python
+thisset = {"apple", "banana", "cherry"}
+for x in thisset:
+    print(x)
+
+thisset = {"apple", "banana", "cherry"}
+print("banana" in thisset)  # True
+
+thisset = {"apple", "banana", "cherry"}
+print("banana" not in thisset)  # False
+```
+
+---
+
+### **Add Items**
+
+To add an item to a set, use the `add()` method.
+
+**Example**:
+```python
+thisset = {"apple", "banana", "cherry"}
+thisset.add("orange")
+print(thisset)
+```
+
+You can add items from another set into the current set using the `update()` method.
+
+**Example**:
+```python
+x = {"hello", "one"}
+y = {"yes", "abc"}
+x.update(y)
+print(x)
+```
+
+---
+
+### **Remove Items**
+
+You can remove items using `remove()` or `discard()` methods.
+
+**Examples**:
+```python
+thisset = {"apple", "banana", "cherry"}
+thisset.remove("banana")
+print(thisset)
+
+thisset = {"apple", "banana", "cherry"}
+thisset.discard("banana")
+print(thisset)
+```
+
+---
+
+### **Join Sets**
+
+There are multiple ways to join two or more sets in Python:
+- **`union()`** and **`update()`** methods join all items from both sets.
+- **`intersection()`** keeps only the duplicates.
+- **`difference()`** keeps items from the first set that are not in the other set(s).
+- **`symmetric_difference()`** keeps items that are not common to both sets.
+
+---
+
+### **Union()**
+
+The `union()` method joins two sets.
+
+**Examples**:
+```python
+set1 = {"a", "b", "c"}
+set2 = {1, 2, 3}
+set3 = set1.union(set2)
+print(set3)
+
+# Alternatively, you can use the `|` operator
+set1 = {"a", "b", "c"}
+set2 = {1, 2, 3}
+set3 = set1 | set2
+print(set3)
+```
+
+---
+
+### **Join Multiple Sets**
+
+You can join multiple sets using `union()`.
+
+**Example**:
+```python
+set1 = {"a", "b", "c"}
+set2 = {1, 2, 3}
+set3 = {"John", "Elena"}
+set4 = {"apple", "bananas", "cherry"}
+myset = set1.union(set2, set3, set4)
+print(myset)
+```
+
+---
+
+### **Update()**
+
+The `update()` method inserts the items in another set into the current set.
+
+**Example**:
+```python
+set1 = {"a", "b", "c"}
+set2 = {1, 2, 3}
+set1.update(set2)
+print(set1)
+```
+
+---
+
+### **Intersection()**
+
+The `intersection()` method keeps only the duplicates (common items).
+
+**Examples**:
+```python
+set1 = {"apple", "banana", "cherry"}
+set2 = {"google", "microsoft", "apple"}
+set3 = set1.intersection(set2)
+print(set3)
+
+# Alternatively, you can use the `&` operator
+set1 = {"apple", "banana", "cherry"}
+set2 = {"google", "microsoft", "apple"}
+set3 = set1 & set2
+print(set3)
+```
+
+---
+
+### **intersection_update()**
+
+The `intersection_update()` method keeps only the duplicates and modifies the original set.
+
+**Example**:
+```python
+set1 = {"apple", "banana", "cherry"}
+set2 = {"google", "microsoft", "apple"}
+set1.intersection_update(set2)
+print(set1)
+```
+
+---
+
+### **Difference()**
+
+The `difference()` method returns a new set with items from the first set that are not in the other set(s).
+
+**Examples**:
+```python
+set1 = {"apple", "banana", "cherry"}
+set2 = {"google", "microsoft", "apple"}
+set3 = set1.difference(set2)
+print(set3)
+
+# Alternatively, you can use the `-` operator
+set1 = {"apple", "banana", "cherry"}
+set2 = {"google", "microsoft", "apple"}
+set3 = set1 - set2
+print(set3)
+```
+
+---
+
+### **difference_update()**
+
+The `difference_update()` method removes items from the original set that are also in the other set(s).
+
+**Example**:
+```python
+set1 = {"apple", "banana", "cherry"}
+set2 = {"google", "microsoft", "apple"}
+set1.difference_update(set2)
+print(set1)
+```
+
+---
+
+### **symmetric_difference()**
+
+The `symmetric_difference()` method keeps only the elements that are not present in both sets.
+
+**Examples**:
+```python
+set1 = {"apple", "banana", "cherry"}
+set2 = {"google", "microsoft", "apple"}
+set3 = set1.symmetric_difference(set2)
+print(set3)
+
+# Alternatively, you can use the `^` operator
+set1 = {"apple", "banana", "cherry"}
+set2 = {"google", "microsoft", "apple"}
+set3 = set1 ^ set2
+print(set3)
+
+# Modify the original set with `symmetric_difference_update()`
+set1 = {"apple", "banana", "cherry"}
+set2 = {"google", "microsoft", "apple"}
+set1.symmetric_difference_update(set2)
+print(set1)
+```
+
+---
+
 
